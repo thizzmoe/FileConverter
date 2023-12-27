@@ -5,7 +5,6 @@ st.set_page_config(page_title="Free File Converter", page_icon=":tada:", layout=
 # header
 st.subheader("This is a free converter for ALL file types!")
 
-st.button("Reset", type="primary")
 if st.button('Say hello'):
     st.write('Why hello there')
 else:
