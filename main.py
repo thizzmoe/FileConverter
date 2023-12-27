@@ -9,14 +9,14 @@ for uploaded_file in uploaded_files:
     st.write("filename:", uploaded_file.name)
     st.write(bytes_data)
     with st.sidebar:
-    selected = option_menu(
-        "Choose conversion",
-        ["JSON to TOML", "Converter #02 (TBC)", "Converter #03 (TBC)"],
-        icons=["gear"],
-        # menu_icon="bookmark-fill",
-        menu_icon="robot",
-        default_index=0,
-    )
+        selected = option_menu(
+            "Choose conversion",
+            ["JSON to TOML", "Converter #02 (TBC)", "Converter #03 (TBC)"],
+            icons=["gear"],
+            # menu_icon="bookmark-fill",
+            menu_icon="robot",
+            default_index=0,
+        )
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:
