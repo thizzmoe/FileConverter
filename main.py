@@ -2,6 +2,15 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 
+with st.sidebar:
+    selected = option_menu(
+        "Choose conversion",
+        ["JSON to TOML", "Converter #02 (TBC)", "Converter #03 (TBC)"],
+        icons=["gear"],
+        # menu_icon="bookmark-fill",
+        menu_icon="robot",
+        default_index=0,
+    )
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
