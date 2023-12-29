@@ -3,20 +3,17 @@ import pandas as pd
 from io import StringIO
 
 
-uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+uploaded_files = st.file_uploader("Choose doc files to convert to pdf", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
     st.write("filename:", uploaded_file.name)
     st.write(bytes_data)
-    with st.sidebar:
-        selected = option_menu(
-            "Choose conversion",
-            ["JSON to TOML", "Converter #02 (TBC)", "Converter #03 (TBC)"],
-            icons=["gear"],
+    #with st.sidebar:
+   #selected = option_menu(
             # menu_icon="bookmark-fill",
-            menu_icon="robot",
-            default_index=0,
-        )
+           # menu_icon="robot",
+           # default_index=0,
+        #)
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:
